@@ -1,0 +1,45 @@
+@use "variables" as v;
+@use "mixins" as m;
+@use "reset";
+
+header {
+    background-color: v.$color-nav-black-transparent;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 4rem;
+    max-width: 100vw;
+
+    .logo {
+        color: v.$color-text-white;
+        text-decoration: none;
+        font-size: 4rem;
+        padding-left: 17rem;
+    }
+}
+
+nav {
+    ul {
+        li {
+            display: inline-block;
+            padding: 0 1.2rem;
+            text-transform: uppercase;
+
+            a {
+                color: v.$color-text-white;
+                text-decoration: none;
+                font-size: 2rem;
+
+                // & permet de désigner le parent
+                &:hover {
+                    text-decoration: underline;
+                }
+            }
+        }
+    }
+}
