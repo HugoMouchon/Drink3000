@@ -2,6 +2,7 @@
 @use "mixins" as m;
 @use "reset";
 @use "carousel";
+@use "formulaireContact";
 
 @font-face {
     font-family: 'gilroy';
@@ -80,6 +81,7 @@ nav {
         top: 0;
         bottom: 0;
         z-index: -1;
+        overflow: hidden;
     }
 
     .text-accueil {
@@ -108,7 +110,7 @@ nav {
     background-color: v.$color-text-white;
 
 
-    .titre-references{
+    .titre-references {
         text-align: center;
 
         p {
@@ -122,23 +124,23 @@ nav {
             letter-spacing: 1.5rem;
             font-size: 5rem;
         }
-        
+
         .first-partie {
             display: flex;
-            
+
             .block {
                 display: flex;
                 gap: 4rem;
                 justify-content: center;
                 padding-bottom: 3rem;
 
-
                 h3 {
                     font-size: 2rem;
                     text-transform: uppercase;
                 }
-            
-                img{
+
+
+                img {
                     width: 30%;
                 }
             }
@@ -158,13 +160,14 @@ nav {
                     font-size: 2rem;
                     text-transform: uppercase;
                 }
-            
-                img{
+
+                img {
                     width: 10%;
                 }
             }
         }
     }
+
 }
 
 #recettes {
@@ -206,7 +209,8 @@ nav {
         i {
             display: inline-block;
         }
-        hr{
+
+        hr {
             background-color: white;
             height: 1px;
             border: none;
@@ -226,5 +230,45 @@ nav {
     .mojito {
         background-color: v.$color-btn-green;
     }
+}
 
+// Footer
+
+.container-footer {
+    background-color: v.$color-footer;
+    display: flex;
+    justify-content: space-evenly;
+    padding: 7rem 10rem;
+    flex-wrap: wrap;
+
+    .forms-contact {
+
+        display: flex;
+        justify-content: center;
+
+        h3 {
+            text-align: left;
+            color: v.$color-text-white;
+            font-size: 2.5rem;
+        }
+
+        form {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            width: 70vh;
+        }
+
+        label {
+            color: v.$color-text-white;
+        }
+    }
+
+    .maps {
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        color: v.$color-text-white;
+        font-size: 2.5rem;
+    }
 }
