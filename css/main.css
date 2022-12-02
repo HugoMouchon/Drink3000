@@ -70,6 +70,20 @@ img {
   flex: 1 0 100%;
 }
 
+@font-face {
+  font-family: "gilroy";
+  src: url(/fonts/gilroy-extrabold-webfont.woff) format(woff);
+  src: url(/fonts/gilroy-extrabold-webfont.woff2) format(woff2);
+  font-weight: bolder;
+  font-style: bolder;
+}
+@font-face {
+  font-family: "glyphicons";
+  src: url(/fonts/glyphicons-halflings-regular.woff) format(woff);
+  src: url(/fonts/glyphicons-halflings-regular.woff2) format(woff2);
+  font-weight: normal;
+  font-style: normal;
+}
 header {
   background-color: rgba(0, 0, 0, 0.37);
   position: fixed;
@@ -129,6 +143,13 @@ nav ul li a:hover {
 }
 #accueil .text-accueil h2 {
   font-size: 8rem;
+}
+
+#recettes {
+  background-color: white;
+}
+#recettes h1 {
+  font-family: "gilroy";
 }
 
 /*# sourceMappingURL=main.css.map */

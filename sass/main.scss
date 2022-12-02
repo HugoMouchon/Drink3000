@@ -3,6 +3,24 @@
 @use "reset";
 @use "carousel";
 
+@font-face {
+    font-family: 'gilroy';
+    src: url(/fonts/gilroy-extrabold-webfont.woff) format(woff);
+    src: url(/fonts/gilroy-extrabold-webfont.woff2) format(woff2);
+    font-weight: bolder ;
+    font-style: bolder ;
+}
+
+@font-face {
+    font-family: 'glyphicons';
+    src: url(/fonts/glyphicons-halflings-regular.woff) format(woff);
+    src: url(/fonts/glyphicons-halflings-regular.woff2) format(woff2);
+    font-weight: normal ;
+    font-style: normal ;
+}
+
+
+
 // header "sticky" avec une couleu de fond transparente noire
 header {
     background-color: v.$color-nav-black-transparent;
@@ -79,5 +97,13 @@ nav {
         h2 {
             font-size: 8rem;
         }
+    }
+}
+
+#recettes {
+    background-color: white;
+
+    h1 {
+        font-family: 'gilroy' ;
     }
 }
