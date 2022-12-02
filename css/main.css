@@ -201,6 +201,47 @@ nav ul li a:hover {
 }
 #recettes h1 {
   font-family: "gilroy";
+  text-transform: uppercase;
+  text-align: center;
+  letter-spacing: 6px;
+  font-size: x-large;
+  padding: 4rem 0 1rem 0;
+}
+#recettes .filter {
+  padding: 1rem;
+  text-align: center;
+}
+#recettes .card {
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial, sans-serif;
+  font-weight: lighter;
+  color: white;
+  border-radius: 5px;
+  padding: 1rem;
+  margin: 0 auto;
+  max-width: 30rem;
+}
+#recettes .card h2 {
+  margin: 0;
+  text-transform: capitalize;
+}
+#recettes .card h2,
+#recettes .card i {
+  display: inline-block;
+}
+#recettes .card hr {
+  background-color: white;
+  height: 1px;
+  border: none;
+}
+#recettes .card p {
+  margin: 0;
+  padding: 1rem 0;
+}
+#recettes .original {
+  background-color: #E20917;
+}
+#recettes .mojito {
+  background-color: #A0C526;
 }
 
 /*# sourceMappingURL=main.css.map */

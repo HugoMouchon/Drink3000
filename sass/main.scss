@@ -7,16 +7,16 @@
     font-family: 'gilroy';
     src: url(/fonts/gilroy-extrabold-webfont.woff) format(woff);
     src: url(/fonts/gilroy-extrabold-webfont.woff2) format(woff2);
-    font-weight: bolder ;
-    font-style: bolder ;
+    font-weight: bolder;
+    font-style: bolder;
 }
 
 @font-face {
     font-family: 'glyphicons';
     src: url(/fonts/glyphicons-halflings-regular.woff) format(woff);
     src: url(/fonts/glyphicons-halflings-regular.woff2) format(woff2);
-    font-weight: normal ;
-    font-style: normal ;
+    font-weight: normal;
+    font-style: normal;
 }
 
 
@@ -170,7 +170,61 @@ nav {
 #recettes {
     background-color: white;
 
+
     h1 {
-        font-family: 'gilroy' ;
+
+        font-family: 'gilroy';
+        text-transform: uppercase;
+        text-align: center;
+        letter-spacing: 6px;
+        font-size: x-large;
+        padding: 4rem 0 1rem 0;
+
     }
+
+    .filter {
+        padding: 1rem;
+        text-align: center;
+    }
+
+    .card {
+        font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+        font-weight: lighter;
+        color: white;
+        border-radius: 5px;
+
+        padding: 1rem;
+        margin: 0 auto;
+        max-width: 30rem;
+
+        h2 {
+            margin: 0;
+            text-transform: capitalize;
+        }
+
+        h2,
+        i {
+            display: inline-block;
+        }
+        hr{
+            background-color: white;
+            height: 1px;
+            border: none;
+        }
+
+        p {
+            margin: 0;
+            padding: 1rem 0;
+        }
+
+    }
+
+    .original {
+        background-color: v.$color-btn-red;
+    }
+
+    .mojito {
+        background-color: v.$color-btn-green;
+    }
+
 }
