@@ -7,20 +7,9 @@
     }
 }
 
-@mixin button ($bg-color:v.$color-btn, $text-color: white) {
-    color: $text-color;
-    text-decoration: none;
-    padding : .5rem;
-    background-color: $bg-color;
-    transition : all .5s;
-
-    &:hover{
-        background-color: lighten($bg-color, $amount: 10%)
-    }
-}
-
 // No-margin
 @mixin no-margin {
     margin: 0;
     padding: 0;
 }
+

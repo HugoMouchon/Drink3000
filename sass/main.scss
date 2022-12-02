@@ -3,6 +3,7 @@
 @use "reset";
 @use "carousel";
 @use "formulaireContact";
+@use "downArrow";
 
 @font-face {
     font-family: 'gilroy';
@@ -13,7 +14,7 @@
 }
 
 @font-face {
-    font-family: 'glyphicons';
+    font-family: '  ';
     src: url(/fonts/glyphicons-halflings-regular.woff) format(woff);
     src: url(/fonts/glyphicons-halflings-regular.woff2) format(woff2);
     font-weight: normal;
@@ -108,7 +109,6 @@ nav {
 .container-references {
     display: flex;
     background-color: v.$color-text-white;
-
 
     .titre-references {
         text-align: center;
