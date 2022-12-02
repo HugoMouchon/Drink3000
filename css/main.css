@@ -131,4 +131,11 @@ nav ul li a:hover {
   font-size: 8rem;
 }
 
+.container-references {
+  display: flex;
+}
+.container-references .titre-references {
+  justify-content: center;
+}
+
 /*# sourceMappingURL=main.css.map */

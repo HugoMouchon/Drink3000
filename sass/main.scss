@@ -48,6 +48,7 @@ nav {
     }
 }
 
+// Partie Accueil
 #accueil {
 
     // background video de la section acceuil
@@ -79,5 +80,16 @@ nav {
         h2 {
             font-size: 8rem;
         }
+    }
+}
+
+// Partie Références
+
+.container-references {
+    display: flex;
+
+
+    .titre-references{
+        justify-content: center;
     }
 }
