@@ -42,7 +42,6 @@ header {
         color: v.$color-text-white;
         text-decoration: none;
         font-size: 4rem;
-        padding-left: 17rem;
     }
 }
 
@@ -100,6 +99,7 @@ nav {
 
         h2 {
             font-size: 8rem;
+            text-align: center;
         }
     }
 }
@@ -114,7 +114,7 @@ nav {
         text-align: center;
 
         p {
-            font-size: 1.6rem;
+            font-size: 2rem;
         }
 
         h2 {
@@ -127,30 +127,48 @@ nav {
 
         .first-partie {
             display: flex;
-
+            flex-direction: column;
+            
             .block {
                 display: flex;
-                gap: 4rem;
+                flex-direction: column;
                 justify-content: center;
                 padding-bottom: 3rem;
+                gap: 4rem;
 
                 h3 {
                     font-size: 2rem;
                     text-transform: uppercase;
                 }
-
-
                 img {
-                    width: 30%;
+                    width: 100%;
+                }
+            }
+        }
+
+        @include m.media (v.$sm-breakpoint) {
+            .first-partie {
+                display: flex;
+                flex-direction: row;
+
+                .block {
+                    display: flex;
+                    flex-direction: row;
+                    
+                    img {
+                        width: 30%;
+                    }
                 }
             }
         }
 
         .second-partie {
             display: flex;
+            flex-direction: column;
 
             .block {
                 display: flex;
+                flex-direction: column;
                 gap: 4rem;
                 justify-content: center;
                 padding: 3rem 0;
@@ -162,13 +180,30 @@ nav {
                 }
 
                 img {
-                    width: 10%;
+                    width: 100%;
+                }
+            }
+        }
+
+        @include m.media (v.$sm-breakpoint) {
+            .second-partie {
+                display: flex;
+                flex-direction: row;
+
+                .block {
+                    display: flex;
+                    flex-direction: row;
+                    
+                    img {
+                        width: 10%;
+                    }
                 }
             }
         }
     }
 
 }
+
 
 #recettes {
     background-color: white;
@@ -256,7 +291,7 @@ nav {
             display: flex;
             flex-direction: column;
             justify-content: center;
-            width: 70vh;
+            width: 50vh;
         }
 
         label {

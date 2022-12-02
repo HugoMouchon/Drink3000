@@ -191,7 +191,6 @@ header .logo {
   color: #fff;
   text-decoration: none;
   font-size: 4rem;
-  padding-left: 17rem;
 }
 
 nav ul li {
@@ -234,6 +233,7 @@ nav ul li a:hover {
 }
 #accueil .text-accueil h2 {
   font-size: 8rem;
+  text-align: center;
 }
 
 .container-references {
@@ -244,7 +244,7 @@ nav ul li a:hover {
   text-align: center;
 }
 .container-references .titre-references p {
-  font-size: 1.6rem;
+  font-size: 2rem;
 }
 .container-references .titre-references h2 {
   padding-bottom: 4rem;
@@ -255,25 +255,42 @@ nav ul li a:hover {
 }
 .container-references .titre-references .first-partie {
   display: flex;
+  flex-direction: column;
 }
 .container-references .titre-references .first-partie .block {
   display: flex;
-  gap: 4rem;
+  flex-direction: column;
   justify-content: center;
   padding-bottom: 3rem;
+  gap: 4rem;
 }
 .container-references .titre-references .first-partie .block h3 {
   font-size: 2rem;
   text-transform: uppercase;
 }
 .container-references .titre-references .first-partie .block img {
-  width: 30%;
+  width: 100%;
+}
+@media screen and (min-width: 767px) {
+  .container-references .titre-references .first-partie {
+    display: flex;
+    flex-direction: row;
+  }
+  .container-references .titre-references .first-partie .block {
+    display: flex;
+    flex-direction: row;
+  }
+  .container-references .titre-references .first-partie .block img {
+    width: 30%;
+  }
 }
 .container-references .titre-references .second-partie {
   display: flex;
+  flex-direction: column;
 }
 .container-references .titre-references .second-partie .block {
   display: flex;
+  flex-direction: column;
   gap: 4rem;
   justify-content: center;
   padding: 3rem 0;
@@ -283,7 +300,20 @@ nav ul li a:hover {
   text-transform: uppercase;
 }
 .container-references .titre-references .second-partie .block img {
-  width: 10%;
+  width: 100%;
+}
+@media screen and (min-width: 767px) {
+  .container-references .titre-references .second-partie {
+    display: flex;
+    flex-direction: row;
+  }
+  .container-references .titre-references .second-partie .block {
+    display: flex;
+    flex-direction: row;
+  }
+  .container-references .titre-references .second-partie .block img {
+    width: 10%;
+  }
 }
 
 #recettes {
@@ -354,7 +384,7 @@ nav ul li a:hover {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  width: 70vh;
+  width: 50vh;
 }
 .container-footer .forms-contact label {
   color: #fff;

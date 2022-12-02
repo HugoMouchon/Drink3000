@@ -16,3 +16,4 @@ prevButton.addEventListener("click", () => {
   slidesContainer.scrollLeft -= slideWidth;
 });
 //------------------------------------------------
+
