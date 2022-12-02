@@ -66,6 +66,7 @@ nav {
     }
 }
 
+// Partie Accueil
 #accueil {
 
     // background video de la section acceuil
@@ -96,6 +97,72 @@ nav {
 
         h2 {
             font-size: 8rem;
+        }
+    }
+}
+
+// Partie Références
+
+.container-references {
+    display: flex;
+    background-color: v.$color-text-white;
+
+
+    .titre-references{
+        text-align: center;
+
+        p {
+            font-size: 1.6rem;
+        }
+
+        h2 {
+            padding-bottom: 4rem;
+            text-transform: uppercase;
+            font-family: "gilroy";
+            letter-spacing: 1.5rem;
+            font-size: 5rem;
+        }
+        
+        .first-partie {
+            display: flex;
+            
+            .block {
+                display: flex;
+                gap: 4rem;
+                justify-content: center;
+                padding-bottom: 3rem;
+
+
+                h3 {
+                    font-size: 2rem;
+                    text-transform: uppercase;
+                }
+            
+                img{
+                    width: 30%;
+                }
+            }
+        }
+
+        .second-partie {
+            display: flex;
+
+            .block {
+                display: flex;
+                gap: 4rem;
+                justify-content: center;
+                padding: 3rem 0;
+
+
+                h3 {
+                    font-size: 2rem;
+                    text-transform: uppercase;
+                }
+            
+                img{
+                    width: 10%;
+                }
+            }
         }
     }
 }
