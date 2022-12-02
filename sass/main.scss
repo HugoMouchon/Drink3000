@@ -3,6 +3,24 @@
 @use "reset";
 @use "carousel";
 
+@font-face {
+    font-family: 'gilroy';
+    src: url(/fonts/gilroy-extrabold-webfont.woff) format(woff);
+    src: url(/fonts/gilroy-extrabold-webfont.woff2) format(woff2);
+    font-weight: bolder ;
+    font-style: bolder ;
+}
+
+@font-face {
+    font-family: 'glyphicons';
+    src: url(/fonts/glyphicons-halflings-regular.woff) format(woff);
+    src: url(/fonts/glyphicons-halflings-regular.woff2) format(woff2);
+    font-weight: normal ;
+    font-style: normal ;
+}
+
+
+
 // header "sticky" avec une couleu de fond transparente noire
 header {
     background-color: v.$color-nav-black-transparent;
@@ -87,9 +105,72 @@ nav {
 
 .container-references {
     display: flex;
+    background-color: v.$color-text-white;
 
 
     .titre-references{
-        justify-content: center;
+        text-align: center;
+
+        p {
+            font-size: 1.6rem;
+        }
+
+        h2 {
+            padding-bottom: 4rem;
+            text-transform: uppercase;
+            font-family: "gilroy";
+            letter-spacing: 1.5rem;
+            font-size: 5rem;
+        }
+        
+        .first-partie {
+            display: flex;
+            
+            .block {
+                display: flex;
+                gap: 4rem;
+                justify-content: center;
+                padding-bottom: 3rem;
+
+
+                h3 {
+                    font-size: 2rem;
+                    text-transform: uppercase;
+                }
+            
+                img{
+                    width: 30%;
+                }
+            }
+        }
+
+        .second-partie {
+            display: flex;
+
+            .block {
+                display: flex;
+                gap: 4rem;
+                justify-content: center;
+                padding: 3rem 0;
+
+
+                h3 {
+                    font-size: 2rem;
+                    text-transform: uppercase;
+                }
+            
+                img{
+                    width: 10%;
+                }
+            }
+        }
+    }
+}
+
+#recettes {
+    background-color: white;
+
+    h1 {
+        font-family: 'gilroy' ;
     }
 }

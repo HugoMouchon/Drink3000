@@ -8,6 +8,7 @@ html {
 
 body {
   font-size: 1.4rem;
+  font-family: "gilroy", sans-serif;
   margin: 0;
   padding: 0;
 }
@@ -70,6 +71,20 @@ img {
   flex: 1 0 100%;
 }
 
+@font-face {
+  font-family: "gilroy";
+  src: url(/fonts/gilroy-extrabold-webfont.woff) format(woff);
+  src: url(/fonts/gilroy-extrabold-webfont.woff2) format(woff2);
+  font-weight: bolder;
+  font-style: bolder;
+}
+@font-face {
+  font-family: "glyphicons";
+  src: url(/fonts/glyphicons-halflings-regular.woff) format(woff);
+  src: url(/fonts/glyphicons-halflings-regular.woff2) format(woff2);
+  font-weight: normal;
+  font-style: normal;
+}
 header {
   background-color: rgba(0, 0, 0, 0.37);
   position: fixed;
@@ -133,9 +148,59 @@ nav ul li a:hover {
 
 .container-references {
   display: flex;
+  background-color: #fff;
 }
 .container-references .titre-references {
+  text-align: center;
+}
+.container-references .titre-references p {
+  font-size: 1.6rem;
+}
+.container-references .titre-references h2 {
+  padding-bottom: 4rem;
+  text-transform: uppercase;
+  font-family: "gilroy";
+  letter-spacing: 1.5rem;
+  font-size: 5rem;
+}
+.container-references .titre-references .first-partie {
+  display: flex;
+}
+.container-references .titre-references .first-partie .block {
+  display: flex;
+  gap: 4rem;
   justify-content: center;
+  padding-bottom: 3rem;
+}
+.container-references .titre-references .first-partie .block h3 {
+  font-size: 2rem;
+  text-transform: uppercase;
+}
+.container-references .titre-references .first-partie .block img {
+  width: 30%;
+}
+.container-references .titre-references .second-partie {
+  display: flex;
+}
+.container-references .titre-references .second-partie .block {
+  display: flex;
+  gap: 4rem;
+  justify-content: center;
+  padding: 3rem 0;
+}
+.container-references .titre-references .second-partie .block h3 {
+  font-size: 2rem;
+  text-transform: uppercase;
+}
+.container-references .titre-references .second-partie .block img {
+  width: 10%;
+}
+
+#recettes {
+  background-color: white;
+}
+#recettes h1 {
+  font-family: "gilroy";
 }
 
 /*# sourceMappingURL=main.css.map */
