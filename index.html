@@ -1,7 +1,6 @@
 <!DOCTYPE html>
 <html lang="fr">
 
-
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -26,10 +25,18 @@
         </nav>
     </header>
     <section id="accueil">
-
+        <div class="background-video">
+            <video autoplay loop muted>
+                <source src="vid/mp4/Pour.mp4" type="video/mp4">
+            </video>
+        </div>
+        <div class="text-accueil">
+            <h1><i class="fa-solid fa-martini-glass"></i> Drink 3000</h1>
+            <h2>Découvrez nos boissons énergisante !</h2>
+        </div>
     </section>
     <section id="recettes">
-        <h1> Nos recettes</h1>
+        <!-- <h1> Nos recettes</h1>
 
         <button>
             energisante
@@ -53,7 +60,7 @@
                 </button>
             </div>
 
-        </div>
+        </div> -->
 
 
     </section>
@@ -63,14 +70,27 @@
     <section id="references">
 
     </section>
-    <section id="caroussel">
+    <section id="caroussel slider-wrapper">
+        <div class="container-carousel">
+            <button class="slide-arrow" id="slide-arrow-prev">
+                &#8249;
+            </button>
+            <button class="slide-arrow" id="slide-arrow-next">
+                &#8250;
+            </button>
 
+            <ul class="slides-container" id="slides-container">
+                <li class="slide"><img src="./img/carousel-1.jpg" alt="une image représentant un verre de limonade"></li>
+                <li class="slide"><img src="./img/carousel-2.jpg" alt="une image représentant un morceau d'orange"></li>
+                <li class="slide"><img src="./img/carousel-3.jpg" alt="ume image représentant un ensemble de bouteille de verre de soda"></li>
+            </ul>
+        </div>
     </section>
     <footer id="contact">
 
     </footer>
 
-    <script type="module" src="./js/main.js"></script>
+    <script type="module" src="js/main.js"></script>
 </body>
 
 </html>

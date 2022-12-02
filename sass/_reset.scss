@@ -16,3 +16,7 @@ body {
         // Appliquer la mixin no-margin
         @include m.no-margin;
 }
+
+img {
+    width: 100%;
+}
