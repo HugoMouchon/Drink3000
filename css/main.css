@@ -175,7 +175,7 @@ input[type=submit]:hover {
   font-style: normal;
 }
 header {
-  background-color: rgba(0, 0, 0, 0.37);
+  background-color: rgba(0, 0, 0, 0.704);
   position: fixed;
   top: 0;
   left: 0;
@@ -190,9 +190,29 @@ header {
 header .logo {
   color: #fff;
   text-decoration: none;
-  font-size: 4rem;
+  font-size: 2rem;
 }
 
+@media screen and (min-width: 767px) {
+  header {
+    background-color: rgba(0, 0, 0, 0.704);
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 2rem;
+  }
+  header .logo {
+    color: #fff;
+    text-decoration: none;
+    font-size: 4rem;
+    padding-left: 20rem;
+  }
+}
 nav ul li {
   display: inline-block;
   padding: 0 1.2rem;
@@ -201,44 +221,85 @@ nav ul li {
 nav ul li a {
   color: #fff;
   text-decoration: none;
-  font-size: 2rem;
+  font-size: 5rem;
 }
 nav ul li a:hover {
   text-decoration: underline;
 }
 
+.nav-item {
+  font-size: 2rem;
+}
+
+.nav-link {
+  color: #fff;
+}
+
+#accueil {
+  display: flex;
+  justify-content: center;
+}
 #accueil .background-video {
   height: 100vh;
-  width: 100vw;
   object-fit: cover;
   position: fixed;
-  left: 0;
-  right: 0;
-  top: 0;
-  bottom: 0;
   z-index: -1;
-  overflow: hidden;
 }
 #accueil .text-accueil {
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: space-evenly;
+  justify-content: center;
   min-height: 100vh;
   color: #fff;
-  padding-bottom: 25rem;
+  gap: 5rem;
 }
 #accueil .text-accueil h1 {
-  font-size: 7rem;
+  font-size: 4rem;
 }
 #accueil .text-accueil h2 {
-  font-size: 8rem;
+  font-size: 2rem;
   text-align: center;
 }
 
+@media screen and (min-width: 767px) {
+  #accueil {
+    display: flex;
+    justify-content: center;
+  }
+  #accueil .background-video {
+    height: 100vh;
+    width: 100vw;
+    object-fit: cover;
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    z-index: -1;
+    overflow: hidden;
+  }
+  #accueil .text-accueil {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    min-height: 100vh;
+    color: #fff;
+    padding-bottom: 25rem;
+  }
+  #accueil .text-accueil h1 {
+    font-size: 7rem;
+  }
+  #accueil .text-accueil h2 {
+    font-size: 8rem;
+    text-align: center;
+  }
+}
 .container-references {
   display: flex;
   background-color: #fff;
+  overflow: hidden;
 }
 .container-references .titre-references {
   text-align: center;
@@ -251,7 +312,7 @@ nav ul li a:hover {
   text-transform: uppercase;
   font-family: "gilroy";
   letter-spacing: 1.5rem;
-  font-size: 5rem;
+  font-size: 4rem;
 }
 .container-references .titre-references .first-partie {
   display: flex;
@@ -370,13 +431,15 @@ nav ul li a:hover {
   justify-content: space-evenly;
   padding: 7rem 10rem;
   flex-wrap: wrap;
+  overflow: hidden;
 }
 .container-footer .forms-contact {
   display: flex;
   justify-content: center;
+  align-items: center;
 }
 .container-footer .forms-contact h3 {
-  text-align: left;
+  text-align: center;
   color: #fff;
   font-size: 2.5rem;
 }
@@ -393,8 +456,51 @@ nav ul li a:hover {
   display: flex;
   flex-direction: column;
   text-align: center;
+  padding: 4rem 0;
+}
+.container-footer .maps h3 {
   color: #fff;
   font-size: 2.5rem;
+  padding-bottom: 2rem;
+}
+
+@media screen and (min-width: 767px) {
+  .container-footer {
+    background-color: #464646;
+    display: flex;
+    justify-content: space-evenly;
+    padding: 7rem 10rem;
+    flex-wrap: wrap;
+    overflow: hidden;
+  }
+  .container-footer .forms-contact {
+    display: flex;
+    justify-content: center;
+  }
+  .container-footer .forms-contact h3 {
+    text-align: left;
+    color: #fff;
+    font-size: 2.5rem;
+  }
+  .container-footer .forms-contact form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 60vh;
+  }
+  .container-footer .forms-contact label {
+    color: #fff;
+  }
+  .container-footer .maps {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    padding: 4rem 0;
+  }
+  .container-footer .maps h3 {
+    color: #fff;
+    font-size: 2.5rem;
+  }
 }
 
 /*# sourceMappingURL=main.css.map */
