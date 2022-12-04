@@ -389,40 +389,98 @@ nav ul li a:hover {
   padding: 4rem 0 1rem 0;
 }
 #recettes .filter {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   padding: 1rem;
-  text-align: center;
 }
-#recettes .card {
+#recettes .filter button {
+  background-color: #D2D0C3;
+  color: #464646;
+  margin: 0.2rem;
+  max-width: 12rem;
+}
+#recettes button {
+  border: none;
+  border-radius: 10px;
+  text-transform: uppercase;
+  font-weight: lighter;
+}
+#recettes .wrapper {
+  padding-bottom: 0.5rem;
+  padding-bottom: 4rem;
+}
+#recettes .wrapper .card {
   font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial, sans-serif;
   font-weight: lighter;
   color: white;
-  border-radius: 5px;
+  border-radius: 8px;
   padding: 1rem;
-  margin: 2rem auto;
-  max-width: 30rem;
+  margin: 1rem auto;
+  max-width: 35rem;
 }
-#recettes .card h2 {
+#recettes .wrapper .card .title {
+  display: flex;
+  justify-content: space-between;
+}
+#recettes .wrapper .card .title h2 {
   margin: 0;
   text-transform: capitalize;
 }
-#recettes .card h2,
-#recettes .card i {
+#recettes .wrapper .card .title h2,
+#recettes .wrapper .card .title i {
   display: inline-block;
 }
-#recettes .card hr {
+#recettes .wrapper .card hr {
   background-color: white;
-  height: 1px;
+  height: 2px;
   border: none;
 }
-#recettes .card p {
+#recettes .wrapper .card p {
   margin: 0;
   padding: 1rem 0;
 }
-#recettes .original {
+#recettes .wrapper .card .buttons {
+  display: flex;
+  justify-content: space-between;
+}
+#recettes .wrapper .card .buttons button {
+  color: white;
+}
+#recettes .wrapper .original {
   background-color: #E20917;
 }
-#recettes .mojito {
+#recettes .wrapper .original button {
+  background-color: #b80612;
+}
+#recettes .wrapper .mojito {
   background-color: #A0C526;
+}
+#recettes .wrapper .mojito button {
+  background-color: #718a20;
+}
+#recettes .wrapper .tropical {
+  background-color: #C94C05;
+}
+#recettes .wrapper .tropical button {
+  background-color: #963903;
+}
+@media screen and (min-width: 767px) {
+  #recettes .filter {
+    flex-direction: row;
+    justify-content: space-evenly;
+  }
+  #recettes .wrapper {
+    display: flex;
+    flex-direction: row;
+  }
+}
+
+#boissons {
+  background-color: #D2D0C3;
+  font-family: Arial, Helvetica, sans-serif;
+  text-align: center;
+  padding: 4rem 0;
 }
 
 .container-footer {

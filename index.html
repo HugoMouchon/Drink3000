@@ -5,7 +5,8 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
     <link rel="stylesheet" href="css/main.css">
     <title>Drink 3000</title>
     <!-- Intégration du lien "Awesome" pour pouvoir inclure des icons -->
@@ -19,7 +20,8 @@
 
         <nav class="navbar navbar-expand-sm navbar-dark">
             <div class="container">
-                <button class="navbar-toggler ms-0" type="button" data-bs-toggle="collapse" data-bs-target="#n_bar" aria-controls="navbarNavAltMarkup" aria-label="Toggle navigation">
+                <button class="navbar-toggler ms-0" type="button" data-bs-toggle="collapse" data-bs-target="#n_bar"
+                    aria-controls="navbarNavAltMarkup" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
                 <div class="collapse navbar-collapse" id="n_bar">
@@ -60,17 +62,17 @@
 
             <div class="card original">
 
-                <div>
+                <div class="title">
                     <h2>original</h2>
                     <i class="fa-solid fa-bolt"></i>
-                    <hr>
-
                 </div>
 
-                <p> Boisson énergisante gazeuse, à la taurine et chargée en cafeine
+                <hr>
+
+                <p> Boisson énergisante gazeuse, à la taurine et chargée en cafeine.
                 </p>
 
-                <div>
+                <div class="buttons">
                     <button class="info">
                         plus d'infos
                     </button>
@@ -83,17 +85,42 @@
 
             <div class="card mojito">
 
-                <div>
+                <div class="title">
                     <h2>original</h2>
                     <i class="fa-solid fa-bolt"></i>
-                    <hr>
+                    
 
                 </div>
+                <hr>
 
-                <p> Boisson énergisante gazeuse, à la taurine et chargée en cafeine
+                <p> Boisson énergisante gazeuse, saveur mojito à la caféine et sans alcool.
                 </p>
 
-                <div>
+                <div class="buttons">
+                    <button class="info">
+                        plus d'infos
+                    </button>
+                    <button class="select">
+                        selectionner
+                    </button>
+                </div>
+
+            </div>
+
+            <div class="card tropical">
+
+                <div class="title">
+                    <h2>tropical</h2>
+                    <i class="fa-solid fa-clover"></i>
+                    
+
+                </div>
+                <hr>
+
+                <p> Boisson énergisante gazeuse, aux fruits, taurine, caféine et extraits de gingembre.
+                </p>
+
+                <div class="buttons">
                     <button class="info">
                         plus d'infos
                     </button>
@@ -110,8 +137,12 @@
 
     </section>
     <section id="boissons">
+        <h3>Votre choix :</h3>
+        <p>Boisson selectionnée :</p>
+        <p id="selection"></p>
 
     </section>
+
     <section id="references">
         <div class="container-references">
             <div class="titre-references">
@@ -187,29 +218,36 @@
 
                     <label for="Object">Objet de la demande</label>
                     <select id="Object" name="object">
-                      <option value="rdv">Prendre un rendez-vous</option>
-                      <option value="entretien">Demandez un entretien téléphonique</option>
-                      <option value="devis">Etablir un devis</option>
+                        <option value="rdv">Prendre un rendez-vous</option>
+                        <option value="entretien">Demandez un entretien téléphonique</option>
+                        <option value="devis">Etablir un devis</option>
                     </select>
 
                     <label for="Subject">Votre demande</label>
                     <textarea id="Subject" name="subject" placeholder="Erire quelque chose içi.."
                         style="height:200px"></textarea>
 
-                    <input type="submit" value="Envoyer" >
+                    <input type="submit" value="Envoyer">
 
                 </form>
             </div>
             <div class="maps">
                 <h3>Où sommes-nous ?</h3>
-                <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d10128.38283017396!2d3.1533318!3d50.6067591!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xb7bd19de7bc0e94!2sM2i%20Formation!5e0!3m2!1sfr!2sfr!4v1669980699313!5m2!1sfr!2sfr" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                <iframe
+                    src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d10128.38283017396!2d3.1533318!3d50.6067591!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xb7bd19de7bc0e94!2sM2i%20Formation!5e0!3m2!1sfr!2sfr!4v1669980699313!5m2!1sfr!2sfr"
+                    width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+                    referrerpolicy="no-referrer-when-downgrade"></iframe>
             </div>
         </div>
     </footer>
 
     <!-- Import des fichiers javascript de bootstrap -->
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js" integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js" integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js"
+        integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js"
+        integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13"
+        crossorigin="anonymous"></script>
     <!-- Import du fichier javascript "main.js" -->
     <script type="module" src="js/main.js"></script>
 </body>
