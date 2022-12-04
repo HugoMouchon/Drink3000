@@ -384,8 +384,8 @@ nav ul li a:hover {
   font-family: "gilroy";
   text-transform: uppercase;
   text-align: center;
-  letter-spacing: 6px;
-  font-size: x-large;
+  letter-spacing: 1.5rem;
+  font-size: 4rem;
   padding: 4rem 0 1rem 0;
 }
 #recettes .filter {
