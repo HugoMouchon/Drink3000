@@ -308,7 +308,7 @@ nav ul li a:hover {
   font-size: 2rem;
 }
 .container-references .titre-references h2 {
-  padding-bottom: 4rem;
+  padding: 4rem 4rem;
   text-transform: uppercase;
   font-family: "gilroy";
   letter-spacing: 1.5rem;
