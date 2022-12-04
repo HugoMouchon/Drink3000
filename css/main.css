@@ -217,7 +217,7 @@ nav ul li a:hover {
   color: white;
   border-radius: 5px;
   padding: 1rem;
-  margin: 0 auto;
+  margin: 2rem auto;
   max-width: 30rem;
 }
 #recettes .card h2 {
