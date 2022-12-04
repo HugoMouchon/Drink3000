@@ -1,6 +1,15 @@
+@use "variables" as v;
+
+
+@mixin media($breakpoint) {
+    @media screen and (min-width: $breakpoint){
+        @content;
+    }
+}
 
 // No-margin
 @mixin no-margin {
     margin: 0;
     padding: 0;
 }
+

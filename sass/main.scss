@@ -2,6 +2,8 @@
 @use "mixins" as m;
 @use "reset";
 @use "carousel";
+@use "formulaireContact";
+@use "downArrow";
 
 @font-face {
     font-family: 'gilroy';
@@ -12,7 +14,7 @@
 }
 
 @font-face {
-    font-family: 'glyphicons';
+    font-family: '  ';
     src: url(/fonts/glyphicons-halflings-regular.woff) format(woff);
     src: url(/fonts/glyphicons-halflings-regular.woff2) format(woff2);
     font-weight: normal;
@@ -39,8 +41,30 @@ header {
     .logo {
         color: v.$color-text-white;
         text-decoration: none;
-        font-size: 4rem;
-        padding-left: 17rem;
+        font-size: 2rem;
+    }
+}
+
+@include m.media (v.$sm-breakpoint) {
+    header {
+        background-color: v.$color-nav-black-transparent;
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        z-index: 1;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 2rem;
+
+        // Logo sous forme de lien "a"
+        .logo {
+            color: v.$color-text-white;
+            text-decoration: none;
+            font-size: 4rem;
+            padding-left: 20rem;
+        }
     }
 }
 
@@ -55,7 +79,7 @@ nav {
             a {
                 color: v.$color-text-white;
                 text-decoration: none;
-                font-size: 2rem;
+                font-size: 5rem;
 
                 // & permet de désigner le parent
                 &:hover {
@@ -66,19 +90,24 @@ nav {
     }
 }
 
-// Partie Accueil
+.nav-item {
+    font-size: 2rem;
+}
+
+.nav-link {
+    color: v.$color-text-white;
+}
+
+// Partie Accueil -------------------------------------------------------------------------------------------------------
 #accueil {
+    display: flex;
+    justify-content: center;
 
     // background video de la section acceuil
     .background-video {
         height: 100vh;
-        width: 100vw;
         object-fit: cover;
         position: fixed;
-        left: 0;
-        right: 0;
-        top: 0;
-        bottom: 0;
         z-index: -1;
     }
 
@@ -86,33 +115,74 @@ nav {
         display: flex;
         flex-direction: column;
         align-items: center;
-        justify-content: space-evenly;
+        justify-content: center;
         min-height: 100vh;
         color: v.$color-text-white;
-        padding-bottom: 25rem;
+        gap: 5rem;
 
         h1 {
-            font-size: 7rem;
+            font-size: 4rem;
         }
 
         h2 {
-            font-size: 8rem;
+            font-size: 2rem;
+            text-align: center;
         }
     }
 }
 
-// Partie Références
+@include m.media (v.$sm-breakpoint) {
+    #accueil {
+        display: flex;
+        justify-content: center;
+
+        // background video de la section acceuil
+        .background-video {
+            height: 100vh;
+            width: 100vw;
+            object-fit: cover;
+            position: fixed;
+            left: 0;
+            right: 0;
+            top: 0;
+            bottom: 0;
+            z-index: -1;
+            overflow: hidden;
+        }
+
+        .text-accueil {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: space-evenly;
+            min-height: 100vh;
+            color: v.$color-text-white;
+            padding-bottom: 25rem;
+
+            h1 {
+                font-size: 7rem;
+            }
+
+            h2 {
+                font-size: 8rem;
+                text-align: center;
+            }
+        }
+    }
+}
+
+// Partie Références --------------------------------------------------------------------------------------------------------
 
 .container-references {
     display: flex;
     background-color: v.$color-text-white;
+    overflow: hidden;
 
-
-    .titre-references{
+    .titre-references {
         text-align: center;
 
         p {
-            font-size: 1.6rem;
+            font-size: 2rem;
         }
 
         h2 {
@@ -120,35 +190,54 @@ nav {
             text-transform: uppercase;
             font-family: "gilroy";
             letter-spacing: 1.5rem;
-            font-size: 5rem;
+            font-size: 4rem;
         }
-        
+
         .first-partie {
             display: flex;
-            
+            flex-direction: column;
+
             .block {
                 display: flex;
-                gap: 4rem;
+                flex-direction: column;
                 justify-content: center;
                 padding-bottom: 3rem;
-
+                gap: 4rem;
 
                 h3 {
                     font-size: 2rem;
                     text-transform: uppercase;
                 }
-            
-                img{
-                    width: 30%;
+
+                img {
+                    width: 100%;
+                }
+            }
+        }
+
+        @include m.media (v.$sm-breakpoint) {
+            .first-partie {
+                display: flex;
+                flex-direction: row;
+
+                .block {
+                    display: flex;
+                    flex-direction: row;
+
+                    img {
+                        width: 30%;
+                    }
                 }
             }
         }
 
         .second-partie {
             display: flex;
+            flex-direction: column;
 
             .block {
                 display: flex;
+                flex-direction: column;
                 gap: 4rem;
                 justify-content: center;
                 padding: 3rem 0;
@@ -158,14 +247,33 @@ nav {
                     font-size: 2rem;
                     text-transform: uppercase;
                 }
-            
-                img{
-                    width: 10%;
+
+                img {
+                    width: 100%;
+                }
+            }
+        }
+
+        @include m.media (v.$sm-breakpoint) {
+            .second-partie {
+                display: flex;
+                flex-direction: row;
+
+                .block {
+                    display: flex;
+                    flex-direction: row;
+
+                    img {
+                        width: 10%;
+                    }
                 }
             }
         }
     }
+
 }
+
+// Recettes ---------------------------------------------------------------------------------------------------------------
 
 #recettes {
     background-color: white;
@@ -206,7 +314,8 @@ nav {
         i {
             display: inline-block;
         }
-        hr{
+
+        hr {
             background-color: white;
             height: 1px;
             border: none;
@@ -226,5 +335,100 @@ nav {
     .mojito {
         background-color: v.$color-btn-green;
     }
+}
 
+// Footer --------------------------------------------------------------------------------------------------------------------
+
+.container-footer {
+    background-color: v.$color-footer;
+    display: flex;
+    justify-content: space-evenly;
+    padding: 7rem 10rem;
+    flex-wrap: wrap;
+    overflow: hidden;
+
+    .forms-contact {
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        h3 {
+            text-align: center;
+            color: v.$color-text-white;
+            font-size: 2.5rem;
+        }
+
+        form {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            width: 50vh;
+        }
+
+        label {
+            color: v.$color-text-white;
+        }
+    }
+
+    .maps {
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        padding: 4rem 0;
+
+        h3 {
+            color: v.$color-text-white;
+            font-size: 2.5rem;
+            padding-bottom: 2rem;
+        }
+    }
+}
+
+@include m.media (v.$sm-breakpoint) {
+    .container-footer {
+        background-color: v.$color-footer;
+        display: flex;
+        justify-content: space-evenly;
+        padding: 7rem 10rem;
+        flex-wrap: wrap;
+        overflow: hidden;
+
+        .forms-contact {
+
+            display: flex;
+            justify-content: center;
+
+            h3 {
+                text-align: left;
+                color: v.$color-text-white;
+                font-size: 2.5rem;
+            }
+
+            form {
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                width: 60vh;
+            }
+
+            label {
+                color: v.$color-text-white;
+            }
+        }
+
+        .maps {
+            display: flex;
+            flex-direction: column;
+            text-align: center;
+            padding: 4rem 0;
+
+
+
+            h3 {
+                color: v.$color-text-white;
+                font-size: 2.5rem;
+            }
+        }
+    }
 }
