@@ -29,7 +29,7 @@ prevButton.addEventListener("click", () => {
 const hiddenHeader = document.querySelector("header");
 
 window.addEventListener("scroll", () => {
-  console.log(window.scrollY);
+  // console.log(window.scrollY);
   if (window.scrollY > 200) {
     hiddenHeader.style.display = '';
   } else {
@@ -82,4 +82,46 @@ console.table(boissonTableau);
 //   card.addEventListener('click', handleClick);
 // }
 
+let filterEnergy = document.querySelector("#energy");
+filterEnergy.addEventListener("click", () => {
+  console.log("energy click");
 
+  let modifyP = document.querySelectorAll(".description");
+  modifyP.forEach(element => {
+
+    if (element.dataset.filter != "energy") {
+      element.textContent = "non dispo"
+
+    } else {
+      element.textContent = "tu galere"
+    }
+  });
+});
+
+// let modifyP = boissonTableau.filter(boisson => {
+//   return boisson.filtre != "Energissante";
+// }).forEach( element => {
+//   console.log(element.nom);
+//    let descriptifBoisson = element.document.querySelector("p .description");
+// descriptifBoisson.textContent = "Non disponible";
+// })
+// console.log(modifyP);
+
+let filterDesalterant = document.querySelector("#desalterant");
+filterDesalterant.addEventListener("click", () => {
+  console.log("desalterant click");
+  let modifyP = document.querySelectorAll(".description");
+  modifyP.forEach(element => {
+
+    if (element.dataset.filter != "desalterant") {
+      // let stockDescription = element.textContent;
+      // console.log(element.dataset.description = "dispo");
+      // let stockDescription = element.dataset.description;
+      element.textContent = "non dispo"
+    } else {
+      element.textContent = "tu galere"
+      // element.textContent = stockDescription;
+    }
+  });
+
+});
